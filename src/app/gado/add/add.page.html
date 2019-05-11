@@ -9,7 +9,7 @@
 <ion-content padding>
     <ion-card>
       <div style="text-align: center; height: 150px;overflow: hidden;" (click)="takePhoto()">
-        <img [src]="base64Image ? base64Image : '/assets/icon/favicon.png'" style="width: 100%; margin-top: -49%">
+        <img [src]="base64Image ? base64Image : '/assets/icon/semfoto.png'" style="width: 100%; margin-top: -49%">
       </div>
       <ion-card-content>
         <form [formGroup]="addPage" class="list-form">
@@ -29,9 +29,17 @@
             </ion-item>
             
             <ion-item>
-                <ion-label>
-                  Ultima vacina
-                </ion-label>
+
+              <ion-label>Patriarca</ion-label>
+              <ion-select value="brown" okText="Selecionar" cancelText="Cancelar">
+                <ion-select-option value="bandido">Bandido</ion-select-option>
+                <ion-select-option value="fernandinando">Fernandinando</ion-select-option>
+                <ion-select-option value="josue">Josue</ion-select-option>
+                <ion-select-option value="zuza">Zuza</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Ultima vacina</ion-label>
                 <ion-datetime display-format="DD/MM/YYYY"></ion-datetime>
               </ion-item>
 

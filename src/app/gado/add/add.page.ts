@@ -47,7 +47,7 @@ export class AddPage implements OnInit {
     this._camera.getPicture(this.options).then((imageData) => {
       let filename = imageData.substring(imageData.lastIndexOf('/')+1);
       let path =  imageData.substring(0,imageData.lastIndexOf('/')+1);
-         //then use the method reasDataURL  btw. var_picture is ur image variable
+         //then use the method reasnavigateByUrDataURL  btw. var_picture is ur image variable
       this.file.readAsDataURL(path, filename).then(res=> this.base64Image = res  ).catch(err=>{
         alert("erro2" + err);
         this.base64Image = null;  
@@ -61,6 +61,8 @@ export class AddPage implements OnInit {
 
    public callRegister(){
     let identifier = "1"
+    this.base64Image = null;
+    this.addPage.reset();
     this._router.navigateByUrl("/tabs/gado/detail/"+identifier);
    }
 
