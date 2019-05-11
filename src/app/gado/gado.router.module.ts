@@ -8,15 +8,6 @@ const routes: Routes = [
     component: GadoPage,
     children: [
       { 
-        path: 'detail/:id', 
-        children: [
-            {
-              path: '',
-              loadChildren: './detail/detail.module#DetailPageModule'
-            }
-          ]
-      },
-      { 
         path: 'add', 
         children: [
             {
@@ -31,6 +22,51 @@ const routes: Routes = [
             {
               path: '',
               loadChildren: './list/list.module#ListPageModule'
+            }
+          ]
+      },
+      { 
+        path: 'detail/:id', 
+        children: [
+            {
+              path: '',
+              loadChildren: './detail/detail.module#DetailPageModule'
+            }
+          ]
+      },
+      { 
+        path: 'descedencia/:id', 
+        children: [
+            {
+              path: '',
+              loadChildren: './descedencia/descedencia.module#DescedenciaPageModule'
+            }
+          ]
+      },
+      { 
+        path: 'inseminacao/:id', 
+        children: [
+            {
+              path: '',
+              loadChildren: './inseminacao/inseminacao.module#InseminacaoPageModule'
+            }
+          ]
+      },
+      { 
+        path: 'semen/:id', 
+        children: [
+            {
+              path: '',
+              loadChildren: './semen/semen.module#SemenPageModule'
+            }
+          ]
+      },
+      { 
+        path: 'venda/:id', 
+        children: [
+            {
+              path: '',
+              loadChildren: './venda/venda.module#VendaPageModule'
             }
           ]
       },

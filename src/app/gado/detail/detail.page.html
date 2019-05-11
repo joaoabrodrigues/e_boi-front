@@ -6,6 +6,52 @@
     <ion-title>Detalhes</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content padding>
+    <ion-card (click)="openDetail(1)">
+        <div style="text-align: center; height: 150px;overflow: hidden;">
+          <img src="/assets/icon/favicon.png" style="width: 100%; margin-top: -49%">
+        </div>
+        <ion-card-content>
+          <div>
+            <strong>Nome:</strong> Bandido
+          </div>
+          <div>
+            <strong>Identificação</strong> 1
+          </div>
+          <div>
+            <strong>Ultima vacina</strong> 28-07-2018
+          </div>
+          <div>
+            <strong>Ultima interação</strong> 28-03-2019
+          </div>
+          <br/>
+          <div>
+            <ion-button size="large" (click)="descedencia()" style="width: 45%; float: left;">
+              <div class="twoLines">
+                <ion-icon name="transgender"></ion-icon>
+                Descedência
+              </div>
+            </ion-button>
+            <ion-button size="large" (click)="vender()" style="width: 45%; float: right;">
+                <div class="twoLines">
+                  <ion-icon name="wallet"></ion-icon>
+                  Vender
+                </div>
+            </ion-button>
+            <ion-button size="large" (click)="inseminacao()" style="width: 45%; float: left;">
+                <div class="twoLines">
+                  <ion-icon name="color-filter"></ion-icon>
+                  Inseminação
+                </div>
+            </ion-button>
+            <ion-button size="large" (click)="semen()" style="width: 45%; float: right;">
+                <div class="twoLines">
+                  <ion-icon name="water"></ion-icon>
+                  Semen
+                </div>
+            </ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
 
 </ion-content>

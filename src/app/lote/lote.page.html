@@ -1,9 +1,3 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>lote</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-card (click)="expandItem(item)" *ngFor="let item of items">  
     <ion-card-header color="primary">
@@ -26,10 +20,11 @@
         </app-expandable>
     </ion-card-content>
   </ion-card>
-
   <ion-fab id="search" vertical="bottom" horizontal="end" edge slot="fixed">
     <ion-fab-button color="primary" >
       <ion-icon name="search"></ion-icon>
     </ion-fab-button>  
   </ion-fab>
 </ion-content>
+<br/>
+<br/>
