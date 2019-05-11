@@ -28,11 +28,11 @@ export class RegisterPage implements OnInit {
   }
 
   callRegister(){
-    this._router.navigateByUrl('/login');
+    this._router.navigateByUrl('/');
   }
 
   voltar(){
-    this._router.navigateByUrl('/login');
+    this._router.navigateByUrl('/');
   }
 
   checkPasswords(group: FormGroup) { 
