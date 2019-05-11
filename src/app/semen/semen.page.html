@@ -6,16 +6,16 @@
         <ion-card-content>
             <app-expandable expandHeight="100px" [expanded]="item.expanded">
                 <div>
-                  <ion-label color="secondary">Touro:</ion-label>
-                  <span>Ferdinando LINK AQUI</span>
+                  <ion-label color="secondary">Identificador:</ion-label>
+                  <span>{{item.id}}</span>
                 </div>
                 <div>
-                  <ion-label color="secondary">Data inseminação:</ion-label>
-                  <span>12/12/2012</span>
+                  <ion-label color="secondary">Data coleta:</ion-label>
+                  <span>{{item.data}}</span>
                 </div>
                 <div>
-                  <ion-label color="secondary">Data prevista desmame:</ion-label>
-                  <span>12/12/2012</span>
+                  <ion-label color="secondary">Matriz:</ion-label>
+                  <span>{{item.bovinoId}}</span>
                 </div>    
             </app-expandable>
         </ion-card-content>

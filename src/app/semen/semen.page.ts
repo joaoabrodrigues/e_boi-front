@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JorradaService } from '../services/jorrada.service';
 
 @Component({
   selector: 'app-semen',
@@ -18,7 +19,7 @@ export class SemenPage implements OnInit {
     { expanded: false },
     { expanded: false }
   ];
-  
+
     expandItem(item): void {
       if (item.expanded) {
         item.expanded = false;
@@ -34,7 +35,9 @@ export class SemenPage implements OnInit {
       }
     }
 
-  constructor() { }
+  constructor(private jorradaService: JorradaService) {
+   jorradaService.listAll(window.localStorage.getItem("oauthToken")).subscribe(e=> this.items = e);
+  }
 
   ngOnInit() {
   }
