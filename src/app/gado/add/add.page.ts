@@ -33,7 +33,12 @@ export class AddPage implements OnInit {
 
     this.addPage = this.formBuilder.group({
       nome: ['', Validators.required],
-      identificacao: ['', Validators.required]
+      identificacao: ['', Validators.required],
+      tipo: ['', Validators.required],
+      idade: ['', Validators.required],
+      raca: ['', Validators.required],
+      peso: ['', Validators.required],
+      disponivelParaVenda:['', Validators.required]
     });
     
    }
