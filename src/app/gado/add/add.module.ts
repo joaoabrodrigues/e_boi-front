@@ -1,20 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { GadoPageRoutingModule } from './gado.router.module';
+import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GadoPage } from './gado.page';
+import { AddPage } from './add.page';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AddPage
+  }
+];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GadoPageRoutingModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [GadoPage]
+  declarations: [AddPage]
 })
-export class GadoPageModule {}
+export class AddPageModule {}

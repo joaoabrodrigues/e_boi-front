@@ -1,0 +1,35 @@
+<ion-content padding>
+    <ion-card (click)="openDetail(1)">
+      <div style="text-align: center; height: 150px;overflow: hidden;">
+        <img src="/assets/icon/favicon.png" style="width: 100%; margin-top: -49%">
+      </div>
+      <ion-card-content>
+        <div>
+          <strong>Nome:</strong> Bandido
+        </div>
+        <div>
+          <strong>Identificação</strong> 1
+        </div>
+        <div>
+          <strong>Ultima vacina</strong> 28-07-2018
+        </div>
+        <div>
+          <strong>Ultima interação</strong> 28-03-2019
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-fab vertical="bottom" horizontal="end"  slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="repeat"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button (click)="add()" color="primary">
+              <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="secondary">
+            <ion-icon name="funnel"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+</ion-content>
