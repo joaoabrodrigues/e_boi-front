@@ -6,7 +6,21 @@
     <ion-title>Realizar a venda</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+    <form [formGroup]="register" class="list-form">
+        <ion-item>
+            <ion-label position="floating">
+              <ion-icon name="wallet" item-start class="text-primary"></ion-icon>
+              Preço
+            </ion-label>
+            <ion-input type="text" formControlName="preco"></ion-input>
+          </ion-item>
+      </form>
+      <br/>
+      <div>
+        <ion-button expand="block" (click)="callRegister()" [disabled]="!register.valid">
+          <ion-icon name="send"></ion-icon>
+           Realizar venda
+        </ion-button>
+      </div>
 </ion-content>
