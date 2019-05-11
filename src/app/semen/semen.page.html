@@ -5,5 +5,31 @@
 </ion-header>
 
 <ion-content>
-
+    <ion-card (click)="expandItem(item)" *ngFor="let item of items">  
+        <ion-card-header color="primary">
+          <ion-card-title>Lote 1</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <app-expandable expandHeight="100px" [expanded]="item.expanded">
+                <div>
+                  <ion-label color="secondary">Touro:</ion-label>
+                  <span>Ferdinando LINK AQUI</span>
+                </div>
+                <div>
+                  <ion-label color="secondary">Data inseminação:</ion-label>
+                  <span>12/12/2012</span>
+                </div>
+                <div>
+                  <ion-label color="secondary">Data prevista desmame:</ion-label>
+                  <span>12/12/2012</span>
+                </div>    
+            </app-expandable>
+        </ion-card-content>
+      </ion-card>
+    
+      <ion-fab id="search" vertical="bottom" horizontal="end" edge slot="fixed">
+        <ion-fab-button color="primary" >
+          <ion-icon name="search"></ion-icon>
+        </ion-fab-button>  
+      </ion-fab>
 </ion-content>
