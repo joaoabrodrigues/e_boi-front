@@ -1,0 +1,68 @@
+<ion-content padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col >
+          <!-- Logo -->
+          <div padding-horizontal text-center class="animated fadeInDown">
+              <div class="logo"></div>
+              <h2 ion-text class="text-primary">
+                Novo usuário
+              </h2>
+            </div>
+  
+            <form [formGroup]="register" class="list-form">
+              <ion-item>
+                  <ion-label position="floating">
+                    <ion-icon name="contact" item-start class="text-primary"></ion-icon>
+                    Nome
+                  </ion-label>
+                  <ion-input type="text" formControlName="nome"></ion-input>
+                </ion-item>
+              <ion-item>
+                <ion-label position="floating">
+                  <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+                  Email
+                </ion-label>
+                <ion-input type="email" formControlName="email"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="floating">
+                    <ion-icon name="call" item-start class="text-primary"></ion-icon>
+                    Telefone
+                  </ion-label>
+                  <ion-input type="text" formControlName="telefone"></ion-input>
+                </ion-item>
+  
+              <ion-item>
+                <ion-label position="floating">
+                  <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+                  Senha
+                </ion-label>
+                <ion-input type="password" formControlName="senha"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="floating">
+                    <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+                    Confirmação
+                  </ion-label>
+                  <ion-input type="password" formControlName="confirmacao"></ion-input>
+              </ion-item>
+            </form>
+            <div *ngIf="register.errors && register.errors.notSame">
+                * As senhas não são iguais
+            </div>
+            <br/>
+            <div>
+              <ion-button expand="block" (click)="callRegister()" [disabled]="!register.valid">
+                <ion-icon name="log-in"></ion-icon>
+                 Cadastrar
+              </ion-button>
+            </div>
+            <br/>
+            <div text-center margin-top>
+              <span ion-text color="secondary" tappable (click)="voltar()"><strong>Voltar</strong></span>
+            </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

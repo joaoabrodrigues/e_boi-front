@@ -1,0 +1,7 @@
+{
+  "name": "e-boi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

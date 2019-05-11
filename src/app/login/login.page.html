@@ -1,0 +1,45 @@
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col >
+        <!-- Logo -->
+        <div padding-horizontal text-center class="animated fadeInDown">
+            <div class="logo"></div>
+            <h2 ion-text class="text-primary">
+              <strong>Ionic 3</strong> Start Theme
+            </h2>
+          </div>
+
+          <form class="list-form">
+            <ion-item>
+              <ion-label position="floating">
+                <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+                Email
+              </ion-label>
+              <ion-input type="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">
+                <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+                Senha
+              </ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+          </form>
+          
+          <br/>
+          <div>
+            <ion-button expand="block" (click)="login()">
+              <ion-icon name="log-in"></ion-icon>
+               Entrar
+            </ion-button>
+          </div>
+          <br/>
+          <div text-center margin-top>
+            <span ion-text color="secondary" tappable (click)="register()">Não tem cadastro? <strong>Cadastre-se</strong></span>
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
