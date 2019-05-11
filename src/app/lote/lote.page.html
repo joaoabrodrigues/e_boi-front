@@ -1,21 +1,21 @@
 <ion-content>
-  <ion-card (click)="expandItem(item)" *ngFor="let item of items">  
+  <ion-card (click)="expandItem(item)" *ngFor="let item of items; let i = index" [attr.data-index]="i">  
     <ion-card-header color="primary">
-      <ion-card-title>Lote 1</ion-card-title>
+      <ion-card-title>Lote {{i+1}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
         <app-expandable expandHeight="100px" [expanded]="item.expanded">
             <div>
               <ion-label color="secondary">Touro:</ion-label>
-              <span>Ferdinando LINK AQUI</span>
+              <span>Ferdinando</span>
             </div>
             <div>
-              <ion-label color="secondary">Data inseminação:</ion-label>
+              <ion-label color="secondary">Data finalização:</ion-label>
               <span>12/12/2012</span>
             </div>
             <div>
-              <ion-label color="secondary">Data prevista desmame:</ion-label>
-              <span>12/12/2012</span>
+              <ion-label color="secondary">Valor atual:</ion-label>
+              <span>R$12345.00</span>
             </div>    
         </app-expandable>
     </ion-card-content>
