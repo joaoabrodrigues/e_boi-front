@@ -32,8 +32,7 @@ export class RegisterPage implements OnInit {
   }
 
   voltar(){
-    console.log(this.register);
-    //this._router.navigateByUrl('/login');
+    this._router.navigateByUrl('/login');
   }
 
   checkPasswords(group: FormGroup) { 
